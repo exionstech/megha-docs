@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import { CommandIcon, HeartIcon, TriangleIcon } from "lucide-react";
+import { CircleHelp, CommandIcon, HeartIcon, TriangleIcon } from "lucide-react";
 
 export function Footer() {
   return (
@@ -12,16 +12,10 @@ export function Footer() {
             Build by{" "}
             <Link
               className="px-1 underline underline-offset-2"
-              href="https://github.com/nisabmohd"
+              href="https://exions.tech"
+              target="_blank"
             >
-              nisabmohd
-            </Link>
-            . The source code is available on{" "}
-            <Link
-              className="px-1 underline underline-offset-2"
-              href="https://github.com/nisabmohd/Aria-Docs"
-            >
-              GitHub
+              Exions Tech
             </Link>
             .
           </p>
@@ -39,18 +33,26 @@ export function FooterButtons() {
   return (
     <>
       <Link
-        href="https://vercel.com/templates/next.js/documentation-template"
-        className={buttonVariants({ variant: "outline", size: "sm" })}
+        href="https://www.meghaexpress.in/contact-us"
+        target="_blank"
+        className={`${buttonVariants({
+          variant: "outline",
+          size: "sm",
+        })} active:scale-95`}
       >
-        <TriangleIcon className="h-[0.8rem] w-4 mr-2 text-primary fill-current" />
-        Deploy
+        <CircleHelp className="h-[0.8rem] w-4 mr-2 text-primary" />
+        Contact Us
       </Link>
       <Link
-        href="https://github.com/sponsors/nisabmohd"
-        className={buttonVariants({ variant: "outline", size: "sm" })}
+        href="https://exions.tech/contact"
+        target="_blank"
+        className={`${buttonVariants({
+          variant: "outline",
+          size: "sm",
+        })} active:scale-95`}
       >
         <HeartIcon className="h-4 w-4 mr-2 text-red-600 fill-current" />
-        Sponsor
+        Build Your Docs
       </Link>
     </>
   );
